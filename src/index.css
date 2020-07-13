@@ -11,3 +11,29 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.cal-display {
+  height:70px;
+  background-color: darkcyan; 
+  width:100%;
+  font-size: xx-large;
+  color: aliceblue;
+}
+
+.cal-keypad {
+  font-size: x-large;
+}
+
+.keys {
+  display: block;
+  background-color: blanchedalmond;
+}
+
+.keys button {
+  width:25%;
+  height:60px;
+}
+
+.full-width {
+  width:100%
+}
