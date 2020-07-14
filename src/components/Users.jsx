@@ -36,6 +36,7 @@ class Users extends Component {
   }
 
   handleAddUser = () => {
+    console.log("Add user call hua");
     this.props.history.push("/users/new");
   };
 

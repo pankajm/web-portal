@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import Table from "./common/Table";
 import { Link } from "react-router-dom";
 
@@ -16,14 +16,16 @@ class UsersTable extends Component {
     {
       key: "delete",
       content: (user) =>
-        <button
-          onClick={() => {
-            this.props.onDelete(user);
-          }}
-          className="btn btn-danger btn-sm"
-        >
-          Delete
-        </button>
+        <Fragment>
+          <button
+            onClick={() => {
+              this.props.onDelete(user);
+            }}
+            className="btn btn-danger btn-sm"
+          >
+            Delete
+          </button>
+        </Fragment>
     },
   ];
 

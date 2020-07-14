@@ -1,6 +1,7 @@
 import React, { Fragment, Component } from "react";
 import { Route, Redirect, Switch } from "react-router-dom";
 import Users from "./components/Users";
+import UserDetails from "./components/UserDetails";
 import NotFound from "./components/NotFound";
 import Login from "./components/Login";
 import RegisterForm from "./components/RegisterForm";
@@ -24,6 +25,7 @@ class App extends Component {
         <Navbar currentUser={this.state.currentUser} />
         <main className="container">
           <Switch>
+            <Route path="/users/:id" component={UserDetails}></Route>
             <Route path="/users" component={Users}></Route>
             <Route path="/register" component={RegisterForm}></Route>
             <Route path="/login" component={Login}></Route>
