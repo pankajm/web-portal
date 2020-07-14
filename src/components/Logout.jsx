@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useEffect } from "react";
+import authService from "../services/auth";
 
-function Logout(props) {
-  return (
-    <div>
-      <h1>Logout</h1>
-    </div>
-  );
+const Logout = () => {
+  useEffect(() => {
+    authService.logout();
+    window.location = "/login";
+  })
+  return null;
 }
 
 export default Logout;

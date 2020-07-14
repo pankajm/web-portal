@@ -2,7 +2,7 @@ import httpService from "./httpService";
 
 const apiEndPoint = "https://reqres.in/api/users";
 
-function singleUserUrl(id) {
+const createSingleUserUrl = (id) => {
   return `${apiEndPoint}/${id}`;
 }
 
@@ -11,11 +11,11 @@ export function getUsers(page) {
 }
 
 export function getUser(userId) {
-  return httpService.get(singleUserUrl(userId));
+  return httpService.get(createSingleUserUrl(userId));
 }
 
 export function deleteUser(userId) {
-  return httpService.delete(singleUserUrl(userId));
+  return httpService.delete(createSingleUserUrl(userId));
 }
 
 export function addUser(user) {
@@ -23,5 +23,13 @@ export function addUser(user) {
 }
 
 export function updateUser(userId, user) {
-  return httpService.put(singleUserUrl(userId), user);
+  return httpService.put(createSingleUserUrl(userId), user);
+}
+
+export default {
+  getUsers,
+  addUser,
+  deleteUser,
+  updateUser,
+  getUser
 }
