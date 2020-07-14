@@ -5,6 +5,10 @@
 
 import React from 'react';
 
+/**
+ * 
+ * @param {Function, number} props 
+ */
 function Pagination(props) {
   const { onPageChange, currentPage } = props;
   return (

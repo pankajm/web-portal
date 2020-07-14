@@ -1,5 +1,5 @@
 /** 
- * Authentication service module (Login/SignUp and getting currently signedin user)
+ * Authentication service module (Login/SignUp and getting currently loggedin user)
  */
 
 import httpService from "./httpService";

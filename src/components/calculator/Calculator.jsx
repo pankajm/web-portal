@@ -1,3 +1,8 @@
+/**
+ * Calculator parent componenet with Disply and Keypad as child components
+ */
+
+
 import React, { Component } from 'react';
 import Keypad from './Keypad';
 import Display from './Display';

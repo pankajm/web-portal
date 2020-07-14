@@ -1,5 +1,12 @@
+/**
+ * Simple reusable Button component
+ */
+
 import React from 'react';
 
+/**
+ * @param {Function, string, boolean} props 
+ */
 function Button(props) {
   const { onButtonClick, label, isDisabled } = props;
   return (

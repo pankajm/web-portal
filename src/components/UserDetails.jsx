@@ -2,7 +2,6 @@
  * This component is rendered while adding or updating user. 
  */
 
-
 import React from "react";
 import Joi from "joi-browser";
 import { Redirect } from "react-router-dom";
@@ -46,6 +45,7 @@ class UserDetails extends Form {
       } catch (ex) {
         if (ex.response && ex.response.status === 404) {
           return history.replace("/not-found");
+          // replace method so as to avoid navigating back to temporary state
         }
       }
     }

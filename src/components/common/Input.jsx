@@ -1,5 +1,5 @@
 /**
- * Input component for rendering plain input with type provided (By default text)
+ * Reusable Input component for rendering plain input with type provided (By default text)
  */
 
 

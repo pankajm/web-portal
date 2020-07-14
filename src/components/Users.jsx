@@ -2,7 +2,6 @@
  * This is main parent component of this application having user state. 
  */
 
-
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
 import UsersTable from "./UsersTable";
@@ -47,7 +46,6 @@ class Users extends Component {
   handleAddUser = () => {
     this.props.history.push("/users/new");
   };
-
 
   /** This is to simulate delete action As we are using fake APIs  */
 

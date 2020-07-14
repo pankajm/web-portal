@@ -13,6 +13,9 @@ class RegisterForm extends Form {
     errors: {},
   };
 
+  /**
+   * Joi module schema for validating form inputs
+   */
   schema = {
     username: Joi.string().email().required().label("Username"),
     password: Joi.string().min(5).required().label("Password"),

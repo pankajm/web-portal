@@ -1,3 +1,7 @@
+/**
+ * Reusable Form component with key methods to render input and button
+ */
+
 import React, { Component, Fragment } from "react";
 import Joi from "joi-browser";
 import Input from "./Input";
@@ -45,6 +49,11 @@ class Form extends Component {
     this.doSubmit();
   };
 
+  /**
+   * @param {String} name 
+   * @param {String} label 
+   * @param {Default String} type 
+   */
   renderInput = (name, label, type = "text") => {
     const { data, errors } = this.state;
     return (
@@ -59,6 +68,9 @@ class Form extends Component {
     );
   };
 
+  /**
+   * @param {String} label 
+   */
   renderButton = (label) => (
     <Fragment>
       <Button isDisabled={this.validate()} label={label}></Button>
