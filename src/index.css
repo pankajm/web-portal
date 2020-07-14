@@ -37,3 +37,7 @@ code {
 .full-width {
   width:100%
 }
+
+.navbar {
+  margin-bottom: 40px;
+}

@@ -56,7 +56,7 @@ class Users extends Component {
         <div className="col">
           <button
             onClick={this.handleAddUser}
-            className="btn btn-primary mb-3 mt-3">
+            className="btn btn-info mb-3">
             Add User
           </button>
           <UsersTable
