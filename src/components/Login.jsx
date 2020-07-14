@@ -16,15 +16,14 @@ class LoginForm extends Form {
   };
 
   doSubmit = async () => {
-    const { state } = this.props.location;
+
     try {
       const { username, password } = this.state.data;
       await authService.login(username, password);
-      window.location = state ? state.from.pathname : "/";
+      window.location = "/";
     } catch (ex) {
       if (ex.response && ex.response.status === 400) {
         const errors = { ...this.state.errors };
-        console.log(ex.response);
         errors.username = ex.response.data.error;
         this.setState({ errors });
       }

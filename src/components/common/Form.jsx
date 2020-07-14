@@ -39,9 +39,8 @@ class Form extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    this.state.showSpinner = true;
     const errors = this.validate();
-    this.setState({ errors: errors || {} });
+    this.setState({ errors: errors || {}, showSpinner: true });
     if (errors) return;
     this.doSubmit();
   };

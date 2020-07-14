@@ -2,7 +2,6 @@
  * App component mainly responsible for Routing
  */
 
-
 import React, { Fragment, Component } from "react";
 import { Route, Redirect, Switch } from "react-router-dom";
 import Users from "./components/Users";
@@ -12,7 +11,7 @@ import Login from "./components/Login";
 import RegisterForm from "./components/RegisterForm";
 import Navbar from "./components/Navbar";
 import Logout from "./components/Logout";
-import Calculator from "./components/Calculator";
+import Calculator from "./components/calculator/Calculator";
 import authService from "./services/auth"
 import Profile from './components/Profile';
 

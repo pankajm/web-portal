@@ -2,7 +2,6 @@
  * Authentication service module (Login/SignUp and getting currently signedin user)
  */
 
-
 import httpService from "./httpService";
 
 const loginApiEndPoint = "https://reqres.in/api/login";
