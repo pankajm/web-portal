@@ -1,3 +1,8 @@
+/**
+ * This component is rendered while adding or updating user. 
+ */
+
+
 import React from "react";
 import Joi from "joi-browser";
 import { Redirect } from "react-router-dom";
@@ -27,6 +32,9 @@ class UserDetails extends Form {
     await this.getUserDetails();
   }
 
+  /**
+   * Add and edit user actions are differentiated by "new" keyword in URL
+   */
   async getUserDetails() {
     const { history, match } = this.props;
     if (match.params.id !== "new") {

@@ -1,3 +1,8 @@
+/**
+ * Input component for rendering plain input with type provided (By default text)
+ */
+
+
 import React from "react";
 
 const Input = ({ name, label, error, ...rest }) => {

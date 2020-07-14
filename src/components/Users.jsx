@@ -1,9 +1,15 @@
+/** 
+ * This is main parent component of this application having user state. 
+ */
+
+
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
 import UsersTable from "./UsersTable";
 import Pagination from "./common/Pagination";
 import userService from "../services/userService";
 import authService from "../services/auth";
+import Button from "./common/Button";
 
 class Users extends Component {
   state = {
@@ -26,6 +32,9 @@ class Users extends Component {
     }
     catch (ex) {
       console.log('Error deleting user');
+      // This is just simple logging however 
+      // All exceptions or errors must be logged using remote loggin service
+      // Ex - Sentry
     }
   };
 
@@ -36,7 +45,6 @@ class Users extends Component {
   }
 
   handleAddUser = () => {
-    console.log("Add user call hua");
     this.props.history.push("/users/new");
   };
 
@@ -49,16 +57,16 @@ class Users extends Component {
     return filteredUsers;
   }
 
+  /**
+   * Created simple components for mainting same level of abstraction
+   * in parent component 
+   */
   render() {
     if (!authService.getCurrentUser()) return <Redirect to="/login" />;
     return (
       <div className="row">
         <div className="col">
-          <button
-            onClick={this.handleAddUser}
-            className="btn btn-info mb-3">
-            Add User
-          </button>
+          <Button onButtonClick={this.handleAddUser} label="Add User" ></Button>
           <UsersTable
             users={this.state.users}
             onDelete={this.handleDelete}

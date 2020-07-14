@@ -31,7 +31,6 @@ class UsersTable extends Component {
 
   render() {
     const { users } = this.props;
-
     return (
       <Table
         columns={this.columns}

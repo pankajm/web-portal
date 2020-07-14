@@ -1,3 +1,8 @@
+/**
+ * App component mainly responsible for Routing
+ */
+
+
 import React, { Fragment, Component } from "react";
 import { Route, Redirect, Switch } from "react-router-dom";
 import Users from "./components/Users";

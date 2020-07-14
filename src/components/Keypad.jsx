@@ -9,7 +9,7 @@ class Keypad extends Component {
     return (
       <div className="keys">
         {keyArray.map((key) =>
-          <button name={key} onClick={(e) => onKeyPress(e.currentTarget.name)}>
+          <button key={key} name={key} onClick={(e) => onKeyPress(e.currentTarget.name)}>
             <span className="cal-keypad">{key}</span>
           </button>
         )

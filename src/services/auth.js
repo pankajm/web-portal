@@ -1,8 +1,15 @@
+/** 
+ * Authentication service module (Login/SignUp and getting currently signedin user)
+ */
+
+
 import httpService from "./httpService";
 
 const loginApiEndPoint = "https://reqres.in/api/login";
 const signUpApiEndPoint = "https://reqres.in/api/register"
-const tokenKey = "token";
+const tokenKey = "userToken";
+// In case in future if takon needs to be changed then this is the only place
+// where we have to make changes
 
 export async function login(username, password) {
   const response = await httpService.post(loginApiEndPoint, {
@@ -21,12 +28,8 @@ export function logout() {
 }
 
 export function getCurrentUser() {
-  try {
-    const token = localStorage.getItem(tokenKey);
-    return token;
-  } catch (ex) {
-    return null;
-  }
+  const token = localStorage.getItem(tokenKey);
+  return token;
 }
 
 export function signUp(user) {
@@ -36,15 +39,10 @@ export function signUp(user) {
   });
 }
 
-export function getJwt() {
-  return localStorage.getItem(tokenKey);
-}
-
 export default {
   login,
   logout,
   getCurrentUser,
-  getJwt,
   signUp,
   saveToken
 };

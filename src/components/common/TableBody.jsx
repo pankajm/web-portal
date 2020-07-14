@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import _ from "lodash";
 
 class TableBody extends Component {
-  getCellContent = (item, column) => {
+  getData = (item, column) => {
     if (column.content) return column.content(item);
     return _.get(item, column.path);
   };
@@ -20,7 +20,7 @@ class TableBody extends Component {
           <tr key={item.id}>
             {columns.map((column) => (
               <td key={this.createKey(item, column)}>
-                {this.getCellContent(item, column)}
+                {this.getData(item, column)}
               </td>
             ))}
           </tr>

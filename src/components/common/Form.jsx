@@ -2,6 +2,7 @@ import React, { Component, Fragment } from "react";
 import Joi from "joi-browser";
 import Input from "./Input";
 import Spinner from "./Spinner";
+import Button from "./Button";
 
 class Form extends Component {
   state = {
@@ -13,7 +14,6 @@ class Form extends Component {
   validate = () => {
     const options = { abortEarly: false };
     const result = Joi.validate(this.state.data, this.schema, options);
-    console.log(result);
     if (!result.error) return null;
     const errors = {};
     for (let item of result.error.details) errors[item.path[0]] = item.message;
@@ -62,9 +62,7 @@ class Form extends Component {
 
   renderButton = (label) => (
     <Fragment>
-      <button disabled={this.validate()} className="btn btn-primary mt-2">
-        {label}
-      </button>
+      <Button isDisabled={this.validate()} label={label}></Button>
       <Spinner showSpinner={this.state.showSpinner} />
     </Fragment>
   );

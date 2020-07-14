@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 
 class TableHeader extends Component {
-
   render() {
     const { columns } = this.props;
     return (

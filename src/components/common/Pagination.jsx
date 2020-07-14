@@ -1,3 +1,8 @@
+/** 
+ * Pagination component to navigate between pages.
+ */
+
+
 import React from 'react';
 
 function Pagination(props) {
