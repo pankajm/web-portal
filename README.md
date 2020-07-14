@@ -27,15 +27,16 @@ Each functionality is a different react component. I have tried to make componen
 
 3. This will start the server and application will be opened in browser 
 
-####(P.S. By default the app starts on port 3000 however If the port is busy it will ask you to run the app on other port)
+### (P.S. By default the app starts on port 3000 however If the port is busy it will ask you to run the app on other port)
 
 4. Once app is launched, it will pop up login page by default as no action apart from calculator can be performed without login. So login is mandatory to perform any action on users data. You can login with following credentials - 
 
 *Username - eve.holt@reqres.in*
+
 *Password - test1234*
 (or any random password will work, as this is just a fake API service to simulate signin feature, however Username must be same).
 
-5. Once logged in you can perform CRUB operations on User data. 
+5. Once logged in you can perform CRUD operations on User data. 
 
 
 ## Features 
