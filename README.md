@@ -1,68 +1,51 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# User Web Portal
 
-## Available Scripts
+This is a simple user we portal. You can perform all CRUD operations (Add, edit update, delete) on this portal. This portal also includes Signin and SignUp features using fake RESTfull services.  
 
-In the project directory, you can run:
 
-### `npm start`
+## Technologies used 
+The application is created using create-react-app. Mainly a UI application built in React (16.13.1) with support of few third party libraries (Details can be found in package.json). 
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Each functionality is a different react component. I have tried to make components as reusable as possible to be used in multiple places in application in future. 
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
 
-### `npm test`
+## Running the app
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone the project using following command - 
 
-### `npm run build`
+   *git clone https://github.com/pankajm/web-portal.git*
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Once cloned to local machine, navigate to web-portal directory and run following command 
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+   *npm install* 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   This will install all the dependencies. 
 
-### `npm run eject`
+2. Run the app using following command 
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+   *npm start*
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. This will start the server and application will be opened in browser 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+####(P.S. By default the app starts on port 3000 however If the port is busy it will ask you to run the app on other port)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+4. Once app is launched, it will pop up login page by default as no action apart from calculator can be performed without login. So login is mandatory to perform any action on users data. You can login with following credentials - 
 
-## Learn More
+*Username - eve.holt@reqres.in*
+*Password - test1234*
+(or any random password will work, as this is just a fake API service to simulate signin feature, however Username must be same).
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+5. Once logged in you can perform CRUB operations on User data. 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+## Features 
+1. Add User - Add new user to existing list
+2. Delete User - Delete an existing user
+3. Update user - update user by clicking the blue link on email field of any user
+  (This will open up user details form where you can update details)
+4. Pagination - The fake api service currently returns only 12 users devided in 2 pages. The pagination component at the bottom of the page can be used to navigate between pages.
+5. Calculator - Simple calculator that can be used without login.
+6. Profile - This component is just a placeholder to show that user has logged in. 
+7. Logout - Signout from the currently loggedin session.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+### End 
